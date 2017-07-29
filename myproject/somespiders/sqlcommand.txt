@@ -1,0 +1,6 @@
+
+show variables like '%secure%';
+select distinct info from black_websites into  outfile 'C:/ProgramData/MySQL/MySQL Server 5.7/Uploads/black_website_info.txt';
+select distinct linkurl from outboundlinks_2  into  outfile 'C:/ProgramData/MySQL/MySQL Server 5.7/Uploads/link1.txt';
+load data local infile 'C:/Users/wupc/Desktop/blackspider/cospider/spiders/black_websites.txt' into table black_websites;
+load data local infile 'E:/myproject/url_process/url_from_text.txt' into table test fields terminated by '========>';
